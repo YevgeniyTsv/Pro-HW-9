@@ -12,23 +12,36 @@
 
         //1) Вывести все значения свойств обьектов в массиве
         console.warn(`Task # ${++taskNumber}`);
-        var arr = [
+         var arr = [
             { author: 'Sergei', book: 'Sergei\'s book' },
             { author: 'Ivan', book: 'Ivan\'s book' },
             { author: 'Dmitrii', book: 'Dmitrii\'s book' }
-           
+
         ];
-            for (let i = 0; i < arr.length; i++) {
-                for (const key in arr) {
-                    if (arr.Own(key)) {
-                        const element = arr[key];
-                    }
+
+        for (const obj of arr) {
+            for (const key in obj) {
+
+                console.log(`${key}: ${obj[key]}`);
+            }
+        }
+
+
+
+
+        for (const obj of arr) {
+            for (const key in obj) {
+                if (key == 'author') {
+                    console.log(`${key}: ${obj[key]}`);
                 }
             }
+        }
 
-            console.log(element);
-            
-      
+
+
+
+
+
         let result = arr.map(a => `author ${a.author}`);
 
         console.log(result);
